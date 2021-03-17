@@ -10,7 +10,22 @@
 </head>
 
 <body>
+    <section class="hangman">
+        <div class="output"></div>
+        <div class="word"></div>
+        <div class="category"></div>
+        <div class="letters"></div>
+    </section>
     <script src="/app/Game.js"></script>
+    <script>
+        const game = new Game({
+            lettersWrapper: document.querySelector('.letters'),
+            categoryWrapper: document.querySelector('.category'),
+            wordWrapper: document.querySelector('.word'),
+            outputWrapper: document.querySelector('.output'),
+        });
+        game.start();
+    </script>
 </body>
 
 </html>
